@@ -1,0 +1,25 @@
+def f24(lst):
+    max_idx=0 , max_vol=lst[0]
+    for idx in range(len(lst)):
+        if max_vol<lst[idx]:
+            max_vol = lst[idx]
+            max_idx = max_idx
+    temp_list=lst[:max_idx]+lst[max_idx+1:]
+    max=0
+    for i in temp_list:
+        if max<i:
+            max=i
+    return(max)
+
+print(f24([1,2,3,4,5]))
+
+def f25(n):
+    return(n//10**(len(str(n))-1))
+
+def f26(list):
+    for row in list:
+        max=0
+        for col in row:
+            if col>max:
+                max=col
+        print(max)
